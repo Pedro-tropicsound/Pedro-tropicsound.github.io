@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pedro Filipe Seixas Martins | Systems Tech</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0f1115;
+  --blue: #00bfff;
+  --text: #e6e6e6;
+  --sub: #9aa0a6;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  scroll-behavior: smooth;
+}
+
+section {
+  padding: 80px 10%;
+}
+
+h1, h2 {
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+h2 {
+  margin-bottom: 40px;
+  font-size: 32px;
+  border-left: 4px solid var(--blue);
+  padding-left: 15px;
+}
+
+p {
+  color: var(--sub);
+  line-height: 1.6;
+}
+
+.hero {
+  height: 100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.hero h1 {
+  font-size: 52px;
+}
+
+.hero span {
+  color: var(--blue);
+}
+
+.buttons {
+  margin-top:30px;
+}
+
+.btn {
+  display:inline-block;
+  padding:12px 25px;
+  margin-right:15px;
+  text-decoration:none;
+  border:1px solid var(--blue);
+  color: var(--blue);
+  transition:0.3s;
+}
+
+.btn:hover {
+  background: var(--blue);
+  color: #000;
+}
+
+.grid {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap:25px;
+}
+
+.card {
+  background:#151922;
+  padding:25px;
+  border:1px solid #1f2633;
+  transition:0.3s;
+}
+
+.card:hover {
+  border-color: var(--blue);
+  transform: translateY(-5px);
+}
+
+footer {
+  text-align:center;
+  padding:40px;
+  color: var(--sub);
+  border-top:1px solid #1f2633;
+}
+
+@media(max-width:768px){
+  .hero h1 { font-size:36px; }
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+  <h1>Pedro Filipe Seixas Martins</h1>
+  <p>Systems Technician | FOH Engineer | Live Sound Specialist</p>
+  <p><span>25+ Years Engineering Global Live Sound</span></p>
+
+  <div class="buttons">
+    <a href="#credits" class="btn">View Experience</a>
+    <a href="Pedro-Filipe-Martins-CV.pdf" class="btn" download>Download CV</a>
+    <a href="#contact" class="btn">Contact</a>
+  </div>
+</section>
+
+<section id="credits">
+  <h2>Selected Global Credits</h2>
+  <div class="grid">
+    <div class="card">Vatican Jubilee 2025 – Andrea Bocelli</div>
+    <div class="card">Mary J Blige – European Tour</div>
+    <div class="card">Megadeth – European Tour</div>
+    <div class="card">Spotify Billions Club – Ed Sheeran</div>
+    <div class="card">Barack Obama – Live Systems Tech</div>
+    <div class="card">3Arena – Multiple Major Acts</div>
+  </div>
+</section>
+
+<section>
+  <h2>Technical Expertise</h2>
+  <div class="grid">
+    <div class="card">FOH Engineering</div>
+    <div class="card">Systems Design & Optimization</div>
+    <div class="card">PA Deployment & Calibration</div>
+    <div class="card">RF Coordination</div>
+    <div class="card">A1 / A2 Broadcast</div>
+    <div class="card">IEM & Monitor Systems</div>
+    <div class="card">Smaart Measurement</div>
+    <div class="card">L-Acoustics / Meyer / D&B</div>
+  </div>
+</section>
+
+<section>
+  <h2>Festivals & Major Events</h2>
+  <div class="grid">
+    <div class="card">Electric Picnic</div>
+    <div class="card">Forbidden Fruit</div>
+    <div class="card">All Together Now</div>
+    <div class="card">Rock in Rio</div>
+    <div class="card">Rugby 6 Nations Broadcast</div>
+    <div class="card">United Nations Events</div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Dublin, Ireland</p>
+  <p>Email: <a href="mailto:Pedro@tropicsound.net" style="color:var(--blue);">Pedro@tropicsound.net</a></p>
+</section>
+
+<footer>
+  © 2026 Pedro Filipe Seixas Martins
+</footer>
+
+</body>
+</html>
