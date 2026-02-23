@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pedro Filipe Seixas Martins | Systems Tech</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
 <style>
 :root {
   --bg: #0f1115;
@@ -22,44 +23,53 @@ body {
   scroll-behavior: smooth;
 }
 
-section {
-  padding: 80px 10%;
-}
-
-h1, h2 {
-  font-weight: 800;
-  letter-spacing: 1px;
-}
-
-h2 {
-  margin-bottom: 40px;
-  font-size: 32px;
-  border-left: 4px solid var(--blue);
-  padding-left: 15px;
-}
-
-p {
-  color: var(--sub);
-  line-height: 1.6;
-}
+/* HERO SECTION */
 
 .hero {
   height: 100vh;
   display:flex;
   flex-direction:column;
   justify-content:center;
+  padding: 0 10%;
+  position:relative;
+  background: url('https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=1950&q=80') center center/cover fixed no-repeat;
+}
+
+.hero::before {
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.85), rgba(15,17,21,0.95));
+}
+
+.hero-content {
+  position:relative;
+  z-index:2;
+  animation: fadeIn 1.5s ease forwards;
 }
 
 .hero h1 {
-  font-size: 52px;
+  font-size: 56px;
+  font-weight:800;
+  text-shadow: 0 0 25px rgba(0,191,255,0.5);
 }
 
 .hero span {
   color: var(--blue);
+  font-weight:600;
+}
+
+.hero p {
+  color: var(--sub);
+  margin-top:15px;
+  font-size:18px;
 }
 
 .buttons {
-  margin-top:30px;
+  margin-top:35px;
 }
 
 .btn {
@@ -74,25 +84,40 @@ p {
 
 .btn:hover {
   background: var(--blue);
-  color: #000;
+  color:#000;
+  box-shadow: 0 0 15px var(--blue);
+}
+
+/* GENERAL SECTIONS */
+
+section {
+  padding: 100px 10%;
+}
+
+h2 {
+  margin-bottom: 50px;
+  font-size: 32px;
+  border-left: 4px solid var(--blue);
+  padding-left: 15px;
 }
 
 .grid {
   display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap:25px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap:30px;
 }
 
 .card {
   background:#151922;
-  padding:25px;
+  padding:30px;
   border:1px solid #1f2633;
-  transition:0.3s;
+  transition:0.4s ease;
 }
 
 .card:hover {
   border-color: var(--blue);
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,191,255,0.15);
 }
 
 footer {
@@ -102,8 +127,15 @@ footer {
   border-top:1px solid #1f2633;
 }
 
+/* ANIMATION */
+
+@keyframes fadeIn {
+  from { opacity:0; transform:translateY(20px); }
+  to { opacity:1; transform:translateY(0); }
+}
+
 @media(max-width:768px){
-  .hero h1 { font-size:36px; }
+  .hero h1 { font-size:38px; }
 }
 </style>
 </head>
@@ -111,25 +143,35 @@ footer {
 <body>
 
 <section class="hero">
-  <h1>Pedro Filipe Seixas Martins</h1>
-  <p>Systems Technician | FOH Engineer | Live Sound Specialist</p>
-  <p><span>25+ Years Engineering Global Live Sound</span></p>
+  <div class="hero-content">
+    <h1>Pedro Filipe Seixas Martins</h1>
+    <p>Systems Technician | FOH Engineer | Live Sound Specialist</p>
+    <p><span>25+ Years Engineering Global Live Sound</span></p>
 
-  <div class="buttons">
-    <a href="#credits" class="btn">View Experience</a>
-    <a href="Pedro-Filipe-Martins-CV.pdf" class="btn" download>Download CV</a>
-    <a href="#contact" class="btn">Contact</a>
+    <div class="buttons">
+      <a href="#credits" class="btn">View Experience</a>
+      <a href="Pedro-Filipe-Martins-CV.pdf" class="btn" download>Download CV</a>
+      <a href="#contact" class="btn">Contact</a>
+    </div>
   </div>
 </section>
 
 <section id="credits">
   <h2>Selected Global Credits</h2>
   <div class="grid">
-    <div class="card">Vatican Jubilee 2025 – Andrea Bocelli</div>
+    <div class="card">
+      Vatican Jubilee 2025<br><br>
+      Pharrell Williams<br>
+      Andrea Bocelli<br>
+      John Legend<br>
+      Jennifer Hudson<br>
+      Bam Bam<br>
+      Dario G
+    </div>
     <div class="card">Mary J Blige – European Tour</div>
     <div class="card">Megadeth – European Tour</div>
     <div class="card">Spotify Billions Club – Ed Sheeran</div>
-    <div class="card">Barack Obama – Live Systems Tech</div>
+    <div class="card">In Conversation with Barack Obama</div>
     <div class="card">3Arena – Multiple Major Acts</div>
   </div>
 </section>
@@ -137,13 +179,11 @@ footer {
 <section>
   <h2>Technical Expertise</h2>
   <div class="grid">
-    <div class="card">FOH Engineering</div>
     <div class="card">Systems Design & Optimization</div>
+    <div class="card">FOH Engineering</div>
     <div class="card">PA Deployment & Calibration</div>
-    <div class="card">RF Coordination</div>
-    <div class="card">A1 / A2 Broadcast</div>
     <div class="card">IEM & Monitor Systems</div>
-    <div class="card">Smaart Measurement</div>
+    <div class="card">Smaart & Rita Operator</div>
     <div class="card">L-Acoustics / Meyer / D&B</div>
   </div>
 </section>
